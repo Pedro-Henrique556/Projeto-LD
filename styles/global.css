@@ -6,8 +6,8 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,15 +15,32 @@ body {
 
 header{
     width: 100vw;
+    height: 205px;
     background-size: cover;
-    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #60731A;
     font-size: 24pt;
     color: #F2EDD5;
+
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+    transition: 2s;
 }
+
+header h1 {
+    margin: 16px 0;
+}
+
+header.closed {
+    height: 100vh;
+    position: absolute;
+    display: flex;
+
+    justify-content: initial;
+}
+
 
 nav {
     background-color: #A3BF3B;
@@ -32,8 +49,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0 0 8px 8px;
     box-shadow: 0px 5px 12px -10px rgba(0,0,0,0.75);
+
+    border-radius: 0 0 8px 8px;
 }
 
 nav ul {
@@ -54,4 +72,32 @@ nav ul li a {
 
 nav ul li:hover a{
     border-bottom: solid 4px #F2EDD5;
+}
+
+nav button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20pt;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+nav.closed {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0;
+}
+
+/* Smarthphone */
+@media (max-width: 564px) {
+    nav ul {
+        display: none;
+    }
+
+    nav button {
+        display: initial;
+    }
 }

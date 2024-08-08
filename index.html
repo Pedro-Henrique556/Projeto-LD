@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Limpodelta</title>
+    <title>ECOlletar</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,15 +14,19 @@
 <body>
     <header>
         <h1>ECOlletar</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Registre-se</a></li>
+                <li><a href="#">Trabalhos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <button id="button-menu">
+                Menu
+                <img src="./assets/icons/chevron-down.svg" alt="" width="24px">
+            </button>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Trabalhos</a></li>
-            <li><a href="#">Agendar</a></li>
-        </ul>
-    </nav>
     <main>
         <span id="top-left"><img src="./assets/top-left.png" alt="" width="200px"></span>
         <span id="top-right"><img src="./assets/top-right.png" alt="" width="300px"></span>
@@ -30,10 +34,12 @@
         <h2>     
             Bem vindo ao Projeto ECOlletar
         </h2>
-        <div>
+        <div id="slide">
             <h3>Deseja saber como nosso projeto funciona? <br> então inicie nosso slide</h3>
             <button>Iniciar</button>
         </div>
     </main>
+
+    <script src="./scripts/home.js"></script>
 </body>
 </html>
